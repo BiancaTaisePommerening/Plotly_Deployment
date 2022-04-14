@@ -60,13 +60,31 @@ function buildCharts(sample) {
 
 
   // 3. Create a variable that holds the samples array. 
-  var samplesArray = data.samples; 
-  console.log(samplesArray);
+    var samplesArray = data.samples; 
+    console.log(samplesArray);
 
   // 4. Create a variable that filters the samples for the object with the desired sample number.
-  var resultArray = samplesArray.filter(sampleObj => sampleObj.id == sample);
-  console.log(resultArray);
+    var resultArray = samplesArray.filter(sampleObj => sampleObj.id == sample);
+    console.log(resultArray);
 
 
-});
-}
+    //  5. Create a variable that holds the first sample in the array.
+    var result = resultArray[0];
+    console.log(result);
+
+    // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
+    var otuIds = result.otu_ids;
+    console.log(otuIds);
+
+    var otuLabels = result.otu_labels;
+    console.log(otuLabels);
+
+    var sampleValues = result.sample_values;
+    console.log(sampleValues);
+
+
+    });
+
+// 10. Use Plotly to plot the data with the layout. 
+Plotly.newPlot("bar", barData, barLayout, {responsive: true});
+};
