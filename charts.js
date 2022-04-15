@@ -38,20 +38,6 @@ function buildMetadata(sample) {
     var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
     var result = resultArray[0];
 
-
-    //////  DELIVERABLE 3 QUESTION 1  //////
-    //  Create a variable that filters the metadata array for the object with the desired sample number.
-    var metadata = data.metadata;
-    var metadataArray = metadata.filter(sampleObj => sampleObj.id == sample);
-    ////// END OF DELIVERABLE 3 QUESTION 1  /////
-
-
-    //////   DELIVERABLE 3 QUESTION 2   ////////
-    // Create a variable that holds the first sample in the array.
-    var metaresults = metadataArray[0];
-    //////  END DELIVERABLE 3 QUESTION 2   ////////
-
-
     // Use d3 to select the panel with id of `#sample-metadata`
     var PANEL = d3.select("#sample-metadata");
 
@@ -101,13 +87,6 @@ function buildCharts(sample) {
     var sampleValues = result.sample_values;
     console.log(sampleValues);
 
-
-    //////    DELIVERABLE 3 QUESTION 3  ///////
-    // Create a variable that holds the washing frequency.
-    var washingFrequency = metaresults.wfreq;
-    //////   END OF DELIVERABLE 3 QUESTION 3  /////// 
-
-
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
     //  so the otu_ids with the most bacteria are last.
@@ -125,7 +104,7 @@ function buildCharts(sample) {
         x: sampleValues.slice(0,10).reverse(),
         text: otuLabels.slice(0,10).reverse(),
         type: "bar",
-        orientation: "h"
+        orientation: "h"  
       }];
       console.log(barData);
 
@@ -175,29 +154,21 @@ function buildCharts(sample) {
 
 
 
-  
+    // 1. Create a variable that filters the metadata array for the object with the desired sample number.
+    var metadata = data.metadata;
+    var metadataArray = metadata.filter(sampleObj => sampleObj.id == sample);
+ 
+    // 2. Create a variable that holds the first sample in the array.
+    var metaresults = metadataArray[0];
 
+    // 3. Create a variable that holds the washing frequency.
+    var washingFrequency = metaresults.wfreq;
 
-    
-
-    // Create variables that hold the otu_ids, otu_labels, and sample_values.
-
-
-   
-    // Create the yticks for the bar chart.
-
-    // Use Plotly to plot the bar data and layout.
-    Plotly.newPlot();
-    
-    // Use Plotly to plot the bubble data and layout.
-    Plotly.newPlot();
-   
-    
     // 4. Create the trace for the gauge chart.
     var gaugeData = [{
-      domain: {x: , y: },
+      domain: {x: [0, 1], y: [0, 1]},
       value: washingFrequency,
-      title: {text: "Scrubs per Week" },
+      title: {text: "<b>Belly Button Washing Frequency</b><br>Scrubs per week"},
       type: "indicator",
       mode: "gauge+number",
       gauge: {
@@ -216,7 +187,6 @@ function buildCharts(sample) {
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      title: "Belly Button Washing Frequency ",
       width: 600, height: 500, margin: { t: 0, b: 0 }
     };
 
