@@ -157,7 +157,7 @@ function buildCharts(sample) {
     Plotly.newPlot("bubble", bubbleData, bubbleLayout, {responsive: true}); 
 
 
-///////////////////////////    DELIVERABLE 3     /////////////////////////
+////////////////////////////    DELIVERABLE 3     /////////////////////////
 
 
 
