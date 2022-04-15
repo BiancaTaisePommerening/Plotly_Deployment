@@ -53,6 +53,10 @@ function buildMetadata(sample) {
   });
 }
 
+
+// /////////////////      DELIVERABLE 1    ///////////////////
+
+
 // 1. Create the buildCharts function.
 function buildCharts(sample) {
   // 2. Use d3.json to load and retrieve the samples.json file 
@@ -103,7 +107,19 @@ function buildCharts(sample) {
       }];
       console.log(barData);
 
+    // 9. Create the layout for the bar chart. 
+    var barLayout = {
+      title: "Top 10 Bacteria Cultures Found",
+      xaxis: {title: "Sample"},
+      yaxis: {title: "OTU IDs"},
+      margin: { t:30, l:150}
+    };
+    console.log(barLayout);
+  // 10. Use Plotly to plot the data with the layout. 
+  Plotly.newPlot("bar", barData, barLayout, {responsive: true});
 
 
     });
 };
+
+
