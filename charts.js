@@ -104,7 +104,14 @@ function buildCharts(sample) {
         x: sampleValues.slice(0,10).reverse(),
         text: otuLabels.slice(0,10).reverse(),
         type: "bar",
-        orientation: "h"  
+        orientation: "h",
+        marker: {
+          color: "cornflowerblue",
+          line: {
+            color: "navy",
+            width: 1.5
+          }
+        }
       }];
       console.log(barData);
 
