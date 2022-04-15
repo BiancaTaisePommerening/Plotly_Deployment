@@ -24,7 +24,7 @@
     <div class="row">
       <div class="col-md-2">
         <!-- A <div> belonging to the well class contains a dropdown menu with an id of selDataset. -->
-        <div class="well">
+        <div class="well" style= background-color:#ade6e685>
           <h5>Test Subject ID No.:</h5>
           <!-- The <select> tag indicates a dropdown menu. Its id is selDataset. -->
           <!-- The <select> tag now has an additional attribute, called onchange, which is associated with the optionChanged()function. -->
@@ -34,22 +34,26 @@
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
         <div class="panel panel-primary">
-          <div class="panel-heading">
+          <div class="panel-heading" style= background-color:teal>
             <h3 class="panel-title">Demographic Info</h3>
           </div>
           <!-- A <div> with an id of sample-metadata is the information panel. -->
-          <div id="sample-metadata" class="panel-body"></div>
+          <div id="sample-metadata" class="panel-body" style= background-color:#ade6e679></div>
         </div>
       </div>
       <div class="col-md-5">
+        <p>The bar chart below shows the Top 10 Types of Bacteria found present on the navel(OTUs) vs the number of samples found on the person with whose Subject ID has been selected."</p>
         <div id="bar"></div>
+       
       </div>
       <div class="col-md-5">
+        <p> The gauge chart below represents the frequency of belly button scrubs per week for the selected subject ID.</p>
         <div id="gauge"></div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
+        <p> The bubble chart bellow displays ...  </p>
         <div id="bubble"></div>
       </div>
     </div>
