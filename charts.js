@@ -37,6 +37,21 @@ function buildMetadata(sample) {
     // Filter the data for the object with the desired sample number
     var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
     var result = resultArray[0];
+
+
+    //////  DELIVERABLE 3 QUESTION 1  //////
+    //  Create a variable that filters the metadata array for the object with the desired sample number.
+    var metadata = data.metadata;
+    var metadataArray = metadata.filter(sampleObj => sampleObj.id == sample);
+    ////// END OF DELIVERABLE 3 QUESTION 1  /////
+
+
+    //////   DELIVERABLE 3 QUESTION 2   ////////
+    // Create a variable that holds the first sample in the array.
+    var metaresults = metadataArray[0];
+    //////  END DELIVERABLE 3 QUESTION 2   ////////
+
+
     // Use d3 to select the panel with id of `#sample-metadata`
     var PANEL = d3.select("#sample-metadata");
 
@@ -85,6 +100,13 @@ function buildCharts(sample) {
 
     var sampleValues = result.sample_values;
     console.log(sampleValues);
+
+
+    //////    DELIVERABLE 3 QUESTION 3  ///////
+    // Create a variable that holds the washing frequency.
+    var washingFrequency = metaresults.wfreq;
+    //////   END OF DELIVERABLE 3 QUESTION 3  /////// 
+
 
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
@@ -152,19 +174,15 @@ function buildCharts(sample) {
 ///////////////////////////    DELIVERABLE 3     /////////////////////////
 
 
-    // 1. Create a variable that filters the metadata array for the object with the desired sample number.
 
-    // Create a variable that holds the first sample in the array.
   
 
-    // 2. Create a variable that holds the first sample in the metadata array.
+
     
 
     // Create variables that hold the otu_ids, otu_labels, and sample_values.
 
 
-    // 3. Create a variable that holds the washing frequency.
-    var washingFrequency = 
    
     // Create the yticks for the bar chart.
 
