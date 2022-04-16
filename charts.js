@@ -102,7 +102,7 @@ function buildCharts(sample) {
     let barData = [{
         y: yticks,
         x: sampleValues.slice(0,10).reverse(),
-        text: otuLabels.slice(0,10).reverse(),
+        hovertemplate: otuLabels.slice(0,10).reverse(),
         type: "bar",
         orientation: "h",
         marker: {
@@ -120,7 +120,6 @@ function buildCharts(sample) {
       title: "Top 10 Bacteria Cultures Found",
       // xaxis: {title: "Sample"},
       yaxis: {title: "OTU IDs"},
-      margin: { t:30, l:150},
       paper_bgcolor: "41bad83a",
       plot_bgcolor: "41bad815"
     };
@@ -196,7 +195,6 @@ function buildCharts(sample) {
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-      width: 600, height: 500, margin: { t: 0, b: 0 },
       paper_bgcolor: "41bad83a"
     };
 
