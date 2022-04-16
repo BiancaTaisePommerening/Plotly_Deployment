@@ -123,16 +123,6 @@ function buildCharts(sample) {
       margin: { t:30, l:150},
       paper_bgcolor: "41bad83a",
       plot_bgcolor: "41bad815"
-      // annotations: [{
-      //   xref: 'paper',
-      //   yref: 'paper',
-      //   x: 0.5,
-      //   xanchor: 'center',
-      //   y: -0.25,
-      //   yanchor: 'center',
-      //   text: "The bar chart above shows the Top 10 Types of Bacteria found present on the navel(OTUs)<br> vs the number of samples found on the person with whose Subject ID has been selected.  ",
-      //   showarrow: false
-      // }]
     };
     console.log(barLayout);
   // 10. Use Plotly to plot the data with the layout. 
@@ -211,7 +201,7 @@ function buildCharts(sample) {
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
-    Plotly.newPlot("gauge", gaugeData, gaugeLayout);
+    Plotly.newPlot("gauge", gaugeData, gaugeLayout, {responsive:true});
   });
 
 };
