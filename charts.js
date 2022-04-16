@@ -149,7 +149,6 @@ function buildCharts(sample) {
     var bubbleLayout = {
       title: "Bacteria Cultures per Sample",
       xaxis: {title: "OTU ID"},
-      margin: { t: 30},
       hovermode: "closest",
       paper_bgcolor: '41bad83a'
     };
