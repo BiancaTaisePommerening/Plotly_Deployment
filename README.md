@@ -7,9 +7,10 @@ Build a interactive website using JavaScript in order to make data visualization
 
 ## Design Solution
 
-- Use Plotly to offer interactivity and makes the results of the data findings more easier to understand. 
+- Use Plotly to offer interactivity and make the results of the data findings more easier to understand as well as adding mobile responsiveness to the webpage.
 - Use javaScript to manipulate, parse, and transform data.
 - Use JavaScript D3 library to create interactive features such as drop down menus, buttons, and also retrieve data from external sources. 
+
 - Customize the dashboard using bootstrap, HTML, and a local CSS file.
 - Deploy the the final work to GitHub pages.
 
