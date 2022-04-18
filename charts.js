@@ -86,12 +86,38 @@ function buildCharts(sample) {
 
     var sampleValues = result.sample_values;
     console.log(sampleValues);
-
+    
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
     //  so the otu_ids with the most bacteria are last.
-
+    
+    // Chain the slice, map and reverse methods.
     var yticks = otuIds.slice(0, 10).map(otuID => `OTU ${otuID}`).reverse();
+
+
+    ////// Other ways to define the yticks variable and do the chainning////////
+
+    ///////  OPTION 1  yticks alternative method  //////
+
+    // var yticks = otuIds.slice(0, 10).map(otuID => 
+    //   {
+    //     var tempVar = `OTU ${otuID}`;
+    //     console.log("this is the otuID from map",tempVar);
+    //     return tempVar})
+    //     .reverse();
+        
+    //     var yticks = otuIds.slice(0, 10).map(otuID => {return `OTU ${otuID}`}).reverse();
+
+
+        //////   OPTION 2 yticks alternative method - breaking down step by step   ///////
+
+    // var yticks = []
+    // let slicedOTUIDs= otuIds.slice(0, 10) // expected the output slicedOTUIDs = [the first 10 data pt of the object otuIds]
+    // for (let i = 0; i < slicedOTUIDs.length(); i++){
+    //   let textString = `OTU ${slicedOTUIDs[i]}` // give you outputs each time you loop: "OTU <number of OTU IDs>" 
+    //   yticks.append(textString); // will add or append one by one of above result into the yticks
+    // }
+
     console.log(yticks);
 
 //  var yticks = otuIds.slice(0,10).map(id => "OTU " + id).reverse();
@@ -119,7 +145,8 @@ function buildCharts(sample) {
     var barLayout = {
       title: "Top 10 Bacteria Cultures Found",
       // xaxis: {title: "Sample"},
-      yaxis: {title: "OTU IDs"},
+      yaxis: {title: "Bacteria Specie ID"},
+      xaxis: {title: "Number of Bacteria Samples"},
       paper_bgcolor: "41bad83a",
       plot_bgcolor: "41bad815"
     };
@@ -148,7 +175,8 @@ function buildCharts(sample) {
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
       title: "Bacteria Cultures per Sample",
-      xaxis: {title: "OTU ID"},
+      xaxis: {title: "Bacteria Specie ID"},
+      yaxis: {title: "Number of Bacteria Samples"},
       hovermode: "closest",
       paper_bgcolor: '41bad83a'
     };
