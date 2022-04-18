@@ -5,7 +5,7 @@
 
 Build a interactive website using JavaScript in order to make data visualizations attractive and accessible. Displaying charts that represent the results of a study of bacterias found on the human belly button with the purpose to find the ideal bacteria type for the production of improbable beef, where people from around the US participated and their identities was kept anonymous by having ID number assigned to each of them, which can be used for them to access their results on the website.
 
-# Design Solution
+## Design Solution
 
 - Use Plotly to offer interactivity and makes the results of the data findings more easier to understand. 
 - Use javaScript to manipulate, parse, and transform data.
