@@ -95,32 +95,9 @@ function buildCharts(sample) {
     var yticks = otuIds.slice(0, 10).map(otuID => `OTU ${otuID}`).reverse();
 
 
-    ////// Other ways to define the yticks variable and do the chainning////////
-
-    ///////  OPTION 1  yticks alternative method  //////
-
-    // var yticks = otuIds.slice(0, 10).map(otuID => 
-    //   {
-    //     var tempVar = `OTU ${otuID}`;
-    //     console.log("this is the otuID from map",tempVar);
-    //     return tempVar})
-    //     .reverse();
-        
-    //     var yticks = otuIds.slice(0, 10).map(otuID => {return `OTU ${otuID}`}).reverse();
-
-
-        //////   OPTION 2 yticks alternative method - breaking down step by step   ///////
-
-    // var yticks = []
-    // let slicedOTUIDs= otuIds.slice(0, 10) // expected the output slicedOTUIDs = [the first 10 data pt of the object otuIds]
-    // for (let i = 0; i < slicedOTUIDs.length(); i++){
-    //   let textString = `OTU ${slicedOTUIDs[i]}` // give you outputs each time you loop: "OTU <number of OTU IDs>" 
-    //   yticks.append(textString); // will add or append one by one of above result into the yticks
-    // }
 
     console.log(yticks);
 
-//  var yticks = otuIds.slice(0,10).map(id => "OTU " + id).reverse();
 
 
     // 8. Create the trace for the bar chart. 
